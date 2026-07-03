@@ -22,11 +22,11 @@ sendBtn.addEventListener("click", async () => {
   sendBtn.textContent = "Thinking...";
 
   try {
-    const res = await fetch("https://YOUR-RENDER-APP.onrender.com/ai", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ prompt, mode })
-    });
+const res = await fetch("https://silver-ai-3ukr.onrender.com/ai", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ prompt, mode })
+});
 
     const data = await res.json();
 
