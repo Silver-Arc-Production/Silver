@@ -6,38 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <div class="app">
-    <header>
+
+    <header class="topbar">
       <h1>Silver AI</h1>
-      <p>Code, textures, and files—built for your world.</p>
+      <select id="mode">
+        <option value="code">Code</option>
+        <option value="addon">Minecraft Bedrock Addon</option>
+        <option value="texture">Pixel Texture</option>
+      </select>
     </header>
 
-    <main>
-      <section class="panel">
-        <h2>Ask Silver</h2>
-        <textarea id="prompt" placeholder="Ask for code, textures, or a file..."></textarea>
-        <select id="mode">
-          <option value="code">Code</option>
-          <option value="texture">Pixel Texture</option>
-          <option value="file">File Content</option>
-        </select>
-        <button id="sendBtn">Send</button>
+    <main id="chatWindow"></main>
 
-        <h3>Response</h3>
-        <pre id="response"></pre>
-        <button id="downloadBtn" disabled>Download Output</button>
-      </section>
-
-      <section class="panel">
-        <h2>Texture Preview</h2>
-        <canvas id="textureCanvas" width="16" height="16"></canvas>
-      </section>
-    </main>
-
-    <footer>
-      <p>Custom AI system • Frontend on GitHub Pages • Backend on Render</p>
+    <footer class="inputBar">
+      <textarea id="prompt" placeholder="Ask Silver AI..."></textarea>
+      <button id="sendBtn">Send</button>
     </footer>
+
   </div>
 
   <script src="script.js"></script>
