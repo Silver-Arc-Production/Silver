@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jester Custom AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Jester Custom AI</h1>
+      <p>Code, textures, and files—built for your world.</p>
+    </header>
+
+    <main>
+      <section class="panel">
+        <h2>Ask Jester AI</h2>
+        <textarea id="prompt" placeholder="Ask for code, textures, or a file..."></textarea>
+        <select id="mode">
+          <option value="code">Code</option>
+          <option value="texture">Pixel Texture</option>
+          <option value="file">File Content</option>
+        </select>
+        <button id="sendBtn">Send</button>
+
+        <h3>Response</h3>
+        <pre id="response"></pre>
+        <button id="downloadBtn" disabled>Download Output</button>
+      </section>
+
+      <section class="panel">
+        <h2>Texture Preview</h2>
+        <canvas id="textureCanvas" width="16" height="16"></canvas>
+      </section>
+    </main>
+
+    <footer>
+      <p>Custom AI system • Frontend on GitHub Pages • Backend on Render</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
