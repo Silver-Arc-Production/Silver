@@ -1,5 +1,5 @@
 const chatWindow = document.getElementById("chatWindow");
-const promptEl = document.getElementById("prompt");
+const input = document.getElementById("input");
 const sendBtn = document.getElementById("sendBtn");
 const modeEl = document.getElementById("mode");
 
@@ -24,7 +24,7 @@ function saveChat(role, content) {
 }
 
 sendBtn.addEventListener("click", async () => {
-  const prompt = promptEl.value.trim();
+  const prompt = input.value.trim();
   const mode = modeEl.value;
 
   if (!prompt) return;
@@ -32,7 +32,7 @@ sendBtn.addEventListener("click", async () => {
   saveChat("user", prompt);
   renderChats();
 
-  promptEl.value = "";
+  input.value = "";
   sendBtn.disabled = true;
   sendBtn.textContent = "Thinking...";
 
